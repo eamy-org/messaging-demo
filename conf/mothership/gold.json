@@ -1,0 +1,6 @@
+{
+    "src-uri":  "amqp://tonyg:changeit@",
+    "src-queue":  "milery.gold",
+    "dest-uri": "amqp://tonyg:changeit@gold",
+    "dest-exchange": "milery.inbox"
+}

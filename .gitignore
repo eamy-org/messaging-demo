@@ -1,0 +1,5 @@
+.vagrant
+venv
+*.log
+*.egg-info
+*.pyc
