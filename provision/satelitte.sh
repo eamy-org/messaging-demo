@@ -20,7 +20,7 @@ rabbitmqadmin -q declare binding \
 
 rabbitmqadmin -q declare binding \
     source=milery.outbox \
-    destination=milery.inbox destination_type=exchange
+    destination=milery.inbox destination_type=exchange \
     routing_key=$1
 
 rabbitmqctl -q set_parameter shovel mothership \
