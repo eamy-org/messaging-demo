@@ -12,7 +12,6 @@ from milery.tasks import ping, here
 
 requests.delete(OUTPUT_URL + '?recursive=true')
 
-
 def msg(payload, dest, reply_to=None):
     if not reply_to:
         reply_to = NODE_NAME

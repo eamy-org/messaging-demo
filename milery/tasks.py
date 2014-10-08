@@ -1,4 +1,3 @@
-from __future__ import print_function
 from celery import current_app as app
 from celery.utils.log import get_task_logger
 import requests
