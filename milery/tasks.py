@@ -1,9 +1,8 @@
 from __future__ import print_function
-from datetime import datetime
 from celery import current_app as app
 from celery.utils.log import get_task_logger
+import requests
 
-OUTPUT_FILE_NAME = app.conf.MILERY_OUTPUT
 NODE_NAME = app.conf.MILERY_NODE_NAME
 log = get_task_logger(__name__)
 
@@ -26,8 +25,8 @@ def here(message):
 
 
 def _write_output(task, message):
-    output = '[{} {}] {}: "{}"'.format(
-        datetime.now().strftime('%H:%M:%S'), task, NODE_NAME, message)
+    output = '[{}] {}: "{}"'.format(task, NODE_NAME, message)
     log.info(output)
-    with open(OUTPUT_FILE_NAME, 'a') as output_file:
-        print(output, file=output_file)
+    results_target = app.conf.MILERY_OUTPUT
+    if results_target:
+        requests.post(results_target, data={'value': output})

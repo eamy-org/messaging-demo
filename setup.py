@@ -7,4 +7,4 @@ setup(name='milery',
       author_email='vadimii@me.com',
       url='https://github.com/vadimii/tasknet',
       packages=['milery'],
-      install_requires=['celery'])
+      install_requires=['celery', 'requests'])

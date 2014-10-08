@@ -2,7 +2,7 @@ import os
 from kombu import Exchange, Queue
 from .routers import PrefixRouter
 
-MILERY_OUTPUT = os.environ.get('MILERY_OUTPUT', 'output.log')
+MILERY_OUTPUT = os.environ.get('MILERY_OUTPUT')
 MILERY_NODE_NAME = os.environ.get('MILERY_NODE_NAME', 'default')
 MILERY_BROKER = os.environ.get('MILERY_BROKER', '')
 
