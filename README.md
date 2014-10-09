@@ -39,5 +39,5 @@ The output will look like the sample below:
 [pong] iron: "1 to iron reply to iron"
 ```
 
-BUGS: etcd daemon do not start when the system reboot.
+BUGS: etcd daemon do not start when the system reboots.
 Do not run `vagrant reload`.
