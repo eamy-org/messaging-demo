@@ -25,7 +25,6 @@ chmod +x /etc/init.d/etcd
 # Some node needs to be a leader without any peers
 if [ "$1" == "zinc" ]; then
     sed -i /^peers/d /etc/etcd/etcd.conf
-    
 fi
 
 service etcd start
